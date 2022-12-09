@@ -12,10 +12,13 @@ let pageFourPicLeft = document.querySelector(".page-four-pic-left");
 let pageFourPicRight = document.querySelector(".page-four-pic-right");
 let pageThree = document.querySelector(".page-three");
 let pageFour = document.querySelector(".page-four");
-let pageFive = document.querySelector(".page-five")
-let textBlock = document.querySelector(".text-block")
-let pageSix = document.querySelector(".page-six")
-let pageSixLeftPic = document.querySelector(".page-six-left-pic")
+let pageFive = document.querySelector(".page-five");
+let pageFiveTextBlock = document.querySelector(".text-block");
+let pageSix = document.querySelector(".page-six");
+let pageSixLeftPic = document.querySelector(".page-six-left-pic");
+let pageSixTextBlock = document.querySelector(".page-six-right ~ .page-six-right> .text-block-one");
+
+
 
 
 menuBtn.addEventListener("click" , (e)=>{
@@ -58,13 +61,18 @@ window.addEventListener("scroll" , ()=>{
     if((currentScroll + window.innerHeight + 300) >= (pageFive.offsetTop)  && ( currentScroll <= (Number(pageFive.offsetTop) + Number(pageFive.clientHeight)))){
         pg = pageFive.getBoundingClientRect().top
         document.querySelector(".page-five .top-one>figure").style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `
-        textBlock.style.transform = ` perspective(900px) translateY(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+        pageFiveTextBlock.style.transform = ` perspective(900px) translateY(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
         if((pg - 300) <= 0){
-            textBlock.style.transform = ` perspective(900px) translateY(-50%) rotate3d(1,1,1,0deg) `
+            pageFiveTextBlock.style.transform = ` perspective(900px) translateY(-50%) rotate3d(1,1,1,0deg) `
         }
     }
     if((currentScroll + window.innerHeight + 300) >= (pageSix.offsetTop)  && ( currentScroll <= (Number(pageSix.offsetTop) + Number(pageSix.clientHeight)))){
-       
-        pageSixLeftPic.style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `           
+        pg = pageSix.getBoundingClientRect().top
+        pageSixLeftPic.style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `       
+       pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+        if((pg - 300) <= 0){
+            pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,0deg) `
+        }
+        
     }
 })

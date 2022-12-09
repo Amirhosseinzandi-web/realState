@@ -34,7 +34,8 @@
         min-height: 18vw;
     }
     .text-block-one{
-        width: auto;
+        min-width: 514px;
+        top: 50%;
     }
 }
 
