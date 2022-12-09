@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="820px" height="801px" viewBox="0 0 820 801" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 8</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-8" transform="translate(3.000000, 2.000000)" stroke="#E1B788" stroke-width="3">
+            <polygon id="Rectangle" transform="translate(406.881084, 413.305151) rotate(60.000000) translate(-406.881084, -413.305151) " points="388.378806 106.264265 591.292684 170.157464 670.738611 445.187011 143.023556 720.346037"></polygon>
+            <path d="M406.725676,91 L609.639553,154.8932 L689.085481,429.922747 L161.370426,705.081772 C118.351482,603.04866 113.494647,510.353432 146.799921,426.996089 C180.105195,343.638746 266.747114,231.64005 406.725676,91 Z" id="Rectangle" transform="translate(407.042741, 398.040886) scale(-1, 1) rotate(60.000000) translate(-407.042741, -398.040886) "></path>
+        </g>
+    </g>
+</svg>

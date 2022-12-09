@@ -1,0 +1,53 @@
+@media screen and (max-width:576px){
+
+}
+/* end small mobile */
+
+@media screen and (min-width:577px){
+    
+}
+/* end big mobile */
+
+@media screen and (min-width:768px){
+    .text-block-one{
+        left: 0;
+    }
+}
+/* end tablet */
+
+@media screen and (min-width:992px){
+    .page-one-text>*{
+        text-align: right;
+    }
+    .page-two-text p , .page-four-text p{
+        width: 50%;
+    }
+    .page-four figure:nth-of-type(2){
+        right: -300px;
+        top: -14%;
+    }
+    .page-five-left , .page-six-right{
+        height: auto;
+    }
+    .text-block{
+        width: 33vw;
+        min-height: 18vw;
+    }
+    .text-block-one{
+        width: auto;
+    }
+}
+
+/* end desktop */
+
+@media screen and (min-width:1200px){
+    
+  
+}
+
+/* end big */
+
+@media screen and (min-width:1400px){
+   
+}
+/* end big */

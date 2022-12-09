@@ -1,0 +1,262 @@
+body{
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+main{
+    margin-top: 110px;
+}
+
+header{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+nav{
+    height: 70px;
+    backdrop-filter: blur(7.5px)
+    /* border: 1px solid white; */
+}
+.menu-mobile-container{
+    height: 100%;
+    position: relative;
+    
+}
+.menu-mobile-container>div:nth-of-type(1)>a{
+    width: 100px;
+    height: 100%;
+    background-color: rebeccapurple;
+}
+.menu-mobile-container>div:nth-of-type(1)>a>figure{
+    width: 100%;
+    height: 100%;
+}
+.menu-mobile-container>div:nth-of-type(1)>a>figure>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+.menu-mobile-container>div:nth-of-type(2) i{
+    font-size: 30px;
+    cursor: pointer;
+}
+.menu-mobile-open{
+    position: absolute;
+    top: -70px;
+    left: 0;
+    z-index: -10;
+    border-top: 1px solid rgba(255, 255, 255, 0.164);
+    background-color: black;
+    transition: .3s linear;
+    opacity: 0;
+}
+.menu-mobile-open>ul>li>a{
+    padding: 5px 13px;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.pc-menu>div:nth-of-type(1) a{
+    transition: .3s;
+}
+.menu-mobile-open>ul>li>a:hover ,
+.pc-menu>div:nth-of-type(1) a:hover {
+    color: #A08362;
+}
+.menu-mobile-open>ul>li:last-child>a {
+    border: 2px solid white;
+    /* padding: 5px 10px; */
+}
+.pc-menu>div:nth-of-type(1) li:last-child>a{
+    padding: 5px 13px;
+    border: 2px solid white;
+}
+.menu-mobile-open>ul>li:last-child>a:hover ,
+.pc-menu>div:nth-of-type(1) li:last-child>a:hover {
+    border: 2px solid #A08362;
+    background-color: #A08362;
+    color: #09090A;
+}
+.open{
+    top: 70px;
+    opacity: 1;
+}
+/* *******************start of pc menu******************************************* */
+.pc-menu>div:nth-of-type(2)>a{
+    width: 100px;
+    height: 100%;
+}
+.pc-menu>div:nth-of-type(2)>a>figure{
+    width: 100%;
+    height: 100%;
+}
+.pc-menu>div:nth-of-type(2)>a>figure>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+/* *************Start page one********************************************** */
+.page-one{
+    margin-top: 150px;
+}
+.page-one-text>*{
+    text-align: center;
+}
+.page-one-text h1{
+    font-size: 32px;
+}
+.square-container div{
+    width: 10px;
+    height: 10px;
+    background-color: #E1B788;
+    margin: 0 9px;
+    transform: rotate(45deg);
+}
+.page-one-pic{
+    transform-style: preserve-3d;
+    overflow: hidden;
+    position: relative;
+}
+.video-wrapper{
+    width: 90%;
+    height:600px;
+    border: 2px solid #E1B788;
+    position: relative;
+    transform: perspective(900px) translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(-15deg) rotateY(-14deg) rotateZ(6deg) skew(0deg, 0deg);
+    top: 10%;
+    right: -3%;
+    z-index: 10;
+}
+.video-wrapper>video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pic-one-wrapper{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 10%;
+    right: 16%;
+    z-index: 1;
+    transform: perspective(900px) translate3d(0px, 0%, 0px) scale3d(2, 2, 1) rotateX(-43deg) rotateY(27deg) rotateZ(70deg) skew(4deg, 0deg);
+    /* transform-style: preserve-3d; */
+}
+.pic-one-wrapper>figure{
+    width: 100%;
+    height: 100%;
+}
+.pic-one-wrapper>figure>img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+/* ******************start of page two***************************************************** */
+.page-two , .page-four{
+    position: relative;
+    overflow: hidden;
+    min-height: 550px;
+    /* border: 1px solid red; */
+}
+.page-two-text p , .page-four-text p{
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.page-two figure , .page-four figure{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    z-index: -10;
+    transition: .3s linear;
+}
+.page-two figure>img , .page-four figure>img{
+    width: 100%;
+    height: 100%;
+}
+.page-two figure:nth-of-type(1) {
+    left: -400px;
+    transform: rotate(90deg);
+}
+.page-two figure:nth-of-type(2){
+    right: -360px;
+    transform: perspective(900px) rotateX(42deg) scale(1.6);
+}
+.page-three .top>figure , .page-five .top-one>figure , .page-six-left-pic{
+    transition: .4s linear;
+}
+/* *********************start of page four******************************************************************* */
+.page-four figure:nth-of-type(1){
+    top: 40%;
+    left: -400px;
+}
+.page-four figure:nth-of-type(2){
+    right: -400px;
+    top: -14%;
+}
+/* ****************************start of page five***************************************************************************** */
+.page-five{
+    overflow: hidden;
+}
+.page-five-left , .page-six-right{
+    height: 400px;
+    background-color: #E1B788;
+    position: relative;
+}
+.text-block{
+    background-color: black;
+    padding: 22px;
+    position: absolute;
+    z-index: 10;
+    width: 300px;
+    min-height: 300px;
+    top: 50%;
+    left: 5%;
+    transform:perspective(900px) translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s linear;
+}
+/* *********************start of page six******************************************************************************** */
+/* .page-six-right{
+    height: 600px;
+} */
+.text-block-one{
+    background-color: black;
+    padding: 50px;
+    position: absolute;
+    z-index: 10;
+    width: 450px;
+    height: fit-content;
+    top: 10%;
+    left: 50%;
+    transform:perspective(900px) translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s linear;
+}
+.page-six-left{
+    overflow: hidden;
+}
+.page-six-left>figure{
+    width: 100%;
+    height: 100%;
+}
+.page-six-left>figure>img{
+    width: 100%;
+    height: 100%;
+}
+.text-block-one:nth-of-type(2){
+    opacity: 0 !important;
+}
