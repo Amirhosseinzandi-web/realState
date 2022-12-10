@@ -19,23 +19,29 @@
     .page-one-text>*{
         text-align: right;
     }
-    .page-two-text p , .page-four-text p{
+    .page-two-text p , .page-four-text p , .page-seven-text p{
         width: 50%;
     }
     .page-four figure:nth-of-type(2){
         right: -300px;
         top: -14%;
     }
-    .page-five-left , .page-six-right{
+    .page-five-left , .page-six-right , .page-eight-left{
         height: auto;
     }
-    .text-block{
+    .text-block , .text-block-two{
         width: 33vw;
         min-height: 18vw;
     }
     .text-block-one{
-        min-width: 514px;
+        width: 33vw;
+        min-height: 18vw;
         top: 50%;
+    }
+    
+    .page-seven figure:nth-of-type(2){
+        left: -300px;
+        top: -14%;
     }
 }
 
@@ -49,6 +55,8 @@
 /* end big */
 
 @media screen and (min-width:1400px){
-   
+   .page-three{
+    height: 50vh;
+   }
 }
 /* end big */

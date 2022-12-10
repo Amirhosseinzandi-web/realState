@@ -18,8 +18,9 @@ let pageSix = document.querySelector(".page-six");
 let pageSixLeftPicOne = document.querySelector(".page-six-left>figure");
 let pageSixLeftPicTwo = document.querySelector(".page-six-left-pic");
 let pageSixTextBlock = document.querySelector(".page-six-right ~ .page-six-right> .text-block-one");
-
-
+let pageSeven = document.querySelector(".page-seven");
+let pageSevenPicLeft = document.querySelector(".page-seven-pic-left");
+let pageSevenPicRight = document.querySelector(".page-seven-pic-right");
 
 
 
@@ -63,9 +64,9 @@ window.addEventListener("scroll" , ()=>{
     if((currentScroll + window.innerHeight + 300) >= (pageFive.offsetTop)  && ( currentScroll <= (Number(pageFive.offsetTop) + Number(pageFive.clientHeight)))){
         pg = pageFive.getBoundingClientRect().top
         document.querySelector(".page-five .top-one>figure").style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `
-        pageFiveTextBlock.style.transform = ` perspective(900px) translateX(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+        pageFiveTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
         if((pg - 300) <= 0){
-            pageFiveTextBlock.style.transform = ` perspective(900px) translateX(-50%) rotate3d(1,1,1,0deg) `
+            pageFiveTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,0deg) `
         }
     }
     if((currentScroll + window.innerHeight + 300) >= (pageSix.offsetTop)  && ( currentScroll <= (Number(pageSix.offsetTop) + Number(pageSix.clientHeight)))){
@@ -77,5 +78,10 @@ window.addEventListener("scroll" , ()=>{
             pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,0deg) `
         }
         
+    }
+    if((currentScroll + window.innerHeight + 300) >= (pageSeven.offsetTop)  && ( currentScroll <= (Number(pageSeven.offsetTop) + Number(pageSeven.clientHeight)))){
+       
+        pageSevenPicLeft.style.right = (-650) + (currentScroll * .08) + "px"
+        pageSevenPicRight.style.transform = ` perspective(900px) rotateX(42deg) scale(1.6) rotate(${(currentScroll * .02)}deg) `         
     }
 })
