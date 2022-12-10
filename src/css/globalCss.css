@@ -191,7 +191,10 @@ nav{
     right: -360px;
     transform: perspective(900px) rotateX(42deg) scale(1.6);
 }
-.page-three .top>figure , .page-five .top-one>figure , .page-six-left-pic , .page-six-left>figure{
+.page-three .top>figure ,
+.page-five .top-one>figure , 
+.page-six-left-pic , 
+.page-six-left>figure , .page-eight .top-two>figure{
     transition: .4s linear;
 }
 /* *********************start of page four******************************************************************* */

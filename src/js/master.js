@@ -21,7 +21,8 @@ let pageSixTextBlock = document.querySelector(".page-six-right ~ .page-six-right
 let pageSeven = document.querySelector(".page-seven");
 let pageSevenPicLeft = document.querySelector(".page-seven-pic-left");
 let pageSevenPicRight = document.querySelector(".page-seven-pic-right");
-
+let pageEight = document.querySelector(".page-eight");
+let pageEightTextBlock = document.querySelector(".text-block-two");
 
 
 menuBtn.addEventListener("click" , (e)=>{
@@ -54,7 +55,7 @@ window.addEventListener("scroll" , ()=>{
     }
     if((currentScroll + window.innerHeight + 300) >= (pageThree.offsetTop)  && ( currentScroll <= (Number(pageThree.offsetTop) + Number(pageThree.clientHeight)))){
        
-        document.querySelector(".page-three .top>figure").style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `           
+        document.querySelector(".page-three .top>figure").style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `           
     }
     if((currentScroll + window.innerHeight + 300) >= (pageFour.offsetTop)  && ( currentScroll <= (Number(pageFour.offsetTop) + Number(pageFour.clientHeight)))){
        
@@ -63,7 +64,7 @@ window.addEventListener("scroll" , ()=>{
     }
     if((currentScroll + window.innerHeight + 300) >= (pageFive.offsetTop)  && ( currentScroll <= (Number(pageFive.offsetTop) + Number(pageFive.clientHeight)))){
         pg = pageFive.getBoundingClientRect().top
-        document.querySelector(".page-five .top-one>figure").style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `
+        document.querySelector(".page-five .top-one>figure").style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `
         pageFiveTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
         if((pg - 300) <= 0){
             pageFiveTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,0deg) `
@@ -71,8 +72,8 @@ window.addEventListener("scroll" , ()=>{
     }
     if((currentScroll + window.innerHeight + 300) >= (pageSix.offsetTop)  && ( currentScroll <= (Number(pageSix.offsetTop) + Number(pageSix.clientHeight)))){
         pg = pageSix.getBoundingClientRect().top
-        pageSixLeftPicOne.style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `
-        pageSixLeftPicTwo.style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `       
+        pageSixLeftPicOne.style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `
+        pageSixLeftPicTwo.style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `       
        pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
         if((pg - 300) <= 0){
             pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,0deg) `
@@ -83,5 +84,13 @@ window.addEventListener("scroll" , ()=>{
        
         pageSevenPicLeft.style.right = (-650) + (currentScroll * .08) + "px"
         pageSevenPicRight.style.transform = ` perspective(900px) rotateX(42deg) scale(1.6) rotate(${(currentScroll * .02)}deg) `         
+    }
+    if((currentScroll + window.innerHeight + 300) >= (pageEight.offsetTop)  && ( currentScroll <= (Number(pageEight.offsetTop) + Number(pageEight.clientHeight)))){
+        pg = pageEight.getBoundingClientRect().top
+        document.querySelector(".page-eight .top-two>figure").style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `
+        pageEightTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+        if((pg - 300) <= 0){
+            pageEightTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,0deg) `
+        }
     }
 })
