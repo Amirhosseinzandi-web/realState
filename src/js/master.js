@@ -15,8 +15,10 @@ let pageFour = document.querySelector(".page-four");
 let pageFive = document.querySelector(".page-five");
 let pageFiveTextBlock = document.querySelector(".text-block");
 let pageSix = document.querySelector(".page-six");
-let pageSixLeftPic = document.querySelector(".page-six-left-pic");
+let pageSixLeftPicOne = document.querySelector(".page-six-left>figure");
+let pageSixLeftPicTwo = document.querySelector(".page-six-left-pic");
 let pageSixTextBlock = document.querySelector(".page-six-right ~ .page-six-right> .text-block-one");
+
 
 
 
@@ -61,14 +63,15 @@ window.addEventListener("scroll" , ()=>{
     if((currentScroll + window.innerHeight + 300) >= (pageFive.offsetTop)  && ( currentScroll <= (Number(pageFive.offsetTop) + Number(pageFive.clientHeight)))){
         pg = pageFive.getBoundingClientRect().top
         document.querySelector(".page-five .top-one>figure").style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `
-        pageFiveTextBlock.style.transform = ` perspective(900px) translateY(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+        pageFiveTextBlock.style.transform = ` perspective(900px) translateX(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
         if((pg - 300) <= 0){
-            pageFiveTextBlock.style.transform = ` perspective(900px) translateY(-50%) rotate3d(1,1,1,0deg) `
+            pageFiveTextBlock.style.transform = ` perspective(900px) translateX(-50%) rotate3d(1,1,1,0deg) `
         }
     }
     if((currentScroll + window.innerHeight + 300) >= (pageSix.offsetTop)  && ( currentScroll <= (Number(pageSix.offsetTop) + Number(pageSix.clientHeight)))){
         pg = pageSix.getBoundingClientRect().top
-        pageSixLeftPic.style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `       
+        pageSixLeftPicOne.style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `
+        pageSixLeftPicTwo.style.transform = ` scale(${(currentScroll * 0.00025 + 1)}) `       
        pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
         if((pg - 300) <= 0){
             pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,0deg) `

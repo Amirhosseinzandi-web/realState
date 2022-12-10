@@ -191,7 +191,7 @@ nav{
     right: -360px;
     transform: perspective(900px) rotateX(42deg) scale(1.6);
 }
-.page-three .top>figure , .page-five .top-one>figure , .page-six-left-pic{
+.page-three .top>figure , .page-five .top-one>figure , .page-six-left-pic , .page-six-left>figure{
     transition: .4s linear;
 }
 /* *********************start of page four******************************************************************* */
@@ -204,11 +204,11 @@ nav{
     top: -14%;
 }
 /* ****************************start of page five***************************************************************************** */
-.page-five{
+/* .page-five{
     overflow: hidden;
-}
+} */
 .page-five-left , .page-six-right{
-    height: 400px;
+    height: 330px;
     background-color: #E1B788;
     position: relative;
 }
@@ -219,9 +219,9 @@ nav{
     z-index: 10;
     width: 300px;
     min-height: 300px;
-    top: 50%;
-    left: 5%;
-    transform:perspective(900px) translateY(-50%);
+    top: 17%;
+    left: 50%;
+    transform:perspective(900px) translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
