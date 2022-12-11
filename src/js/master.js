@@ -24,7 +24,20 @@ let pageSevenPicRight = document.querySelector(".page-seven-pic-right");
 let pageEight = document.querySelector(".page-eight");
 let pageEightTextBlock = document.querySelector(".text-block-two");
 let pageNine = document.querySelector(".page-nine");
-let pageNineTextBlock = document.querySelector(".text-block-three")
+let pageNineTextBlock = document.querySelector(".text-block-three");
+let pageTen = document.querySelector(".page-ten");
+let imgWrapOne = document.querySelector(".img-wrap-one>figure");
+let imgWrapTwo = document.querySelector(".img-wrap-two>figure");
+let imgWrapThree = document.querySelector(".img-wrap-three>figure");
+let imgWrapFour = document.querySelector(".img-wrap-four>figure");
+
+
+
+
+
+
+
+
 menuBtn.addEventListener("click" , (e)=>{
     menuMobileOpen.classList.toggle("open")
     e.stopImmediatePropagation()
@@ -99,5 +112,13 @@ window.addEventListener("scroll" , ()=>{
         if((pg - (pageNine.clientHeight -300)) <= 0){
             pageNineTextBlock.style.transform = `  translate(-50% , -50%) rotate3d(1,1,1,0deg) `
         }
+    }
+    if((currentScroll + window.innerHeight + 300) >= (pageTen.offsetTop)  && ( currentScroll <= (Number(pageTen.offsetTop) + Number(pageTen.clientHeight)))){
+        pg = pageTen.getBoundingClientRect().bottom
+        imgWrapOne.style.transform = ` scale(${(pg * 0.00030 + 1)}) `
+        imgWrapTwo.style.transform = ` scale(${(pg * 0.00030 + 1)}) `
+        imgWrapThree.style.transform = ` scale(${(pg * 0.00030 + 1)}) `
+        imgWrapFour.style.transform = ` scale(${(pg * 0.00030 + 1)}) `
+        console.log(pg);
     }
 })

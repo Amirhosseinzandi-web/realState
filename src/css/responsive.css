@@ -12,7 +12,27 @@
     .text-block-one{
         left: 0;
     }
-    
+     /* **************************** */
+     .img-wrap-one{
+        width: 300px;
+        height: 300px;
+        left: 1.3em;
+    }
+    .img-wrap-two{
+        width: 230px;
+        height: 230px;
+        right: 1em;
+    }
+    .img-wrap-three{
+        width: 230px;
+        height: 230px;
+        left: 1em;
+    }
+    .img-wrap-four{
+        width: 300px;
+        height: 300px;
+        right: 1.3em;
+    }
 }
 /* end tablet */
 
@@ -20,7 +40,7 @@
     .page-one-text>*{
         text-align: right;
     }
-    .page-two-text p , .page-four-text p , .page-seven-text p{
+    .page-two-text p , .page-four-text p , .page-seven-text p , .page-ten-text p{
         width: 50%;
     }
     .page-four figure:nth-of-type(2){
@@ -46,6 +66,13 @@
     }
     .text-block-three{
         width: 575px;
+    }
+    /* ************************************************ */
+    .img-wrap-two{
+        right: 4.1em;
+    }
+    .img-wrap-three{
+        left: 4.1em;
     }
 }
 

@@ -162,13 +162,13 @@ nav{
     /* object-fit: cover; */
 }
 /* ******************start of page two***************************************************** */
-.page-two , .page-four , .page-seven{
+.page-two , .page-four , .page-seven , .page-ten{
     position: relative;
     overflow: hidden;
     min-height: 550px;
     /* border: 1px solid red; */
 }
-.page-two-text p , .page-four-text p , .page-seven-text p{
+.page-two-text p , .page-four-text p , .page-seven-text p , .page-ten-text p{
     background-color: rgba(0, 0, 0, 0.466);
 }
 .page-two figure , .page-four figure , .page-seven figure{
@@ -194,7 +194,7 @@ nav{
 .page-three .top>figure ,
 .page-five .top-one>figure , 
 .page-six-left-pic , 
-.page-six-left>figure , .page-eight .top-two>figure{
+.page-six-left>figure , .page-eight .top-two>figure {
     transition: .4s linear;
 }
 /* *********************start of page four******************************************************************* */
@@ -228,7 +228,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .7s linear;
+    transition: .9s linear;
 }
 /* *********************start of page six******************************************************************************** */
 /* .page-six-right{
@@ -264,7 +264,7 @@ nav{
     top: -14%;
     left: -400px;
 }
-/* ********************************************************************************************************************* */
+/* *************************page nine************************************************************************************* */
 .page-nine{
     height: 600px;
     /* border: 1px solid red; */
@@ -289,4 +289,99 @@ nav{
     left: 50%;
     transform: translate(-50% , -50%);
     transition: .9s linear;
+}
+/* **************************page ten******************************************************************************* */
+.page-ten{
+    padding: 140px 10px;
+    overflow: visible;
+    /* border: 1px solid red; */
+}
+.img-wrap-one,
+.img-wrap-two,
+.img-wrap-three,
+.img-wrap-four{
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #E1B788;
+}
+.img-wrap-one>figure,
+.img-wrap-two>figure,
+.img-wrap-three>figure,
+.img-wrap-four>figure{
+    width: 100%;
+    height: 100%;
+    transition: .6s ease-in-out;
+}
+.img-wrap-one>figure>img,
+.img-wrap-two>figure>img,
+.img-wrap-three>figure>img,
+.img-wrap-four>figure>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20% 80%;
+}
+
+
+.img-wrap-one{
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0.5em;
+    transform: translateY(-50%);
+}
+.img-wrap-two{
+    width: 180px;
+    height: 180px;
+    right: 0.5em;
+    top: 0;
+    transform: translateY(-70%);
+}
+.img-wrap-three{
+    width: 180px;
+    height: 180px;
+    left: 0.5em;
+    bottom: 0;
+    transform: translateY(70%);
+}
+.img-wrap-four{
+    width: 200px;
+    height: 200px;
+    right: 0.5em;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.end{
+    margin-top: 350px;
 }
