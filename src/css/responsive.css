@@ -12,6 +12,7 @@
     .text-block-one{
         left: 0;
     }
+    
 }
 /* end tablet */
 
@@ -43,6 +44,9 @@
         left: -300px;
         top: -14%;
     }
+    .text-block-three{
+        width: 575px;
+    }
 }
 
 /* end desktop */
@@ -58,5 +62,8 @@
    .page-three{
     height: 50vh;
    }
+   .page-nine{
+    height: 50vh;
+}
 }
 /* end big */

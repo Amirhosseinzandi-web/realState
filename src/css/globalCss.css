@@ -264,3 +264,29 @@ nav{
     top: -14%;
     left: -400px;
 }
+/* ********************************************************************************************************************* */
+.page-nine{
+    height: 600px;
+    /* border: 1px solid red; */
+    position: relative;
+    overflow: hidden;
+}
+.video-wrapper-one{
+    width: 100%;
+    height: 100%;
+}
+.video-wrapper-one>video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text-block-three{
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.719);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: .9s linear;
+}
