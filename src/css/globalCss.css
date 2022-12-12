@@ -12,6 +12,9 @@ a{
     color: inherit;
     display: inline-block;
 }
+.wow{
+    visibility: hidden;
+}
 main{
     margin-top: 110px;
 }
@@ -77,10 +80,13 @@ nav{
     border: 2px solid white;
     /* padding: 5px 10px; */
 }
-.pc-menu>div:nth-of-type(1) li:last-child>a{
+.pc-menu div:nth-of-type(1) a{
+    /* background-color: red; */
     padding: 5px 13px;
-    border: 2px solid white;
 }
+/* .pc-menu>div:nth-of-type(1) li:first-child{
+    border: 2px solid white;
+} */
 .menu-mobile-open>ul>li:last-child>a:hover ,
 .pc-menu>div:nth-of-type(1) li:last-child>a:hover {
     border: 2px solid #A08362;
@@ -90,6 +96,9 @@ nav{
 .open{
     top: 70px;
     opacity: 1;
+}
+.active{
+    border: 2px solid white;
 }
 /* *******************start of pc menu******************************************* */
 .pc-menu>div:nth-of-type(2)>a{
@@ -228,7 +237,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .9s linear;
+    transition: .3s linear;
 }
 /* *********************start of page six******************************************************************************** */
 /* .page-six-right{
@@ -288,7 +297,7 @@ nav{
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    transition: .9s linear;
+    transition: .3s linear;
 }
 /* **************************page ten******************************************************************************* */
 .page-ten{
@@ -352,8 +361,21 @@ nav{
     bottom: 0;
     transform: translateY(50%);
 }
-
-
+/* **************************page eleven************************************************************************* */
+footer{
+    background-color: #E1B788;
+}
+footer a{
+    font-size: 20px;
+    transition: .4s;
+}
+footer a:hover{
+    transform: scale(1.2);
+    color: red;
+}
+footer i{
+    display: inline-flex;
+}
 
 
 

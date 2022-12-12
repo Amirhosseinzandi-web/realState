@@ -48,6 +48,17 @@ window.addEventListener("click" , ()=>{
         menuMobileOpen.classList.remove("open")
     }
 })
+
+document.querySelector(".pc-menu div:nth-of-type(1) li:first-child").classList.add("active")
+_li = document.querySelectorAll(".pc-menu div:nth-of-type(1) li")
+_li.forEach(self=>{
+    self.addEventListener("click" , ()=>{
+        for(i=0; i<_li.length; i++){
+            _li[i].classList.remove("active")
+        }
+        self.classList.add("active")
+    })
+})
 // ********************************************************************************************************************
 
 
@@ -78,7 +89,7 @@ window.addEventListener("scroll" , ()=>{
     if((currentScroll + window.innerHeight + 300) >= (pageFive.offsetTop)  && ( currentScroll <= (Number(pageFive.offsetTop) + Number(pageFive.clientHeight)))){
         pg = pageFive.getBoundingClientRect().top
         document.querySelector(".page-five .top-one>figure").style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `
-        pageFiveTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+        pageFiveTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,${((pg * 0.03))}deg) `
         if((pg - (pageFive.clientHeight -300)) <= 0){
             pageFiveTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,0deg) `
         }
@@ -87,7 +98,7 @@ window.addEventListener("scroll" , ()=>{
         pg = pageSix.getBoundingClientRect().top
         pageSixLeftPicOne.style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `
         pageSixLeftPicTwo.style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `       
-       pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+       pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,${((pg * 0.03))}deg) `
         if((pg - (pageSix.clientHeight -300)) <= 0){
             pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,0deg) `
         }
@@ -101,14 +112,14 @@ window.addEventListener("scroll" , ()=>{
     if((currentScroll + window.innerHeight + 300) >= (pageEight.offsetTop)  && ( currentScroll <= (Number(pageEight.offsetTop) + Number(pageEight.clientHeight)))){
         pg = pageEight.getBoundingClientRect().top
         document.querySelector(".page-eight .top-two>figure").style.transform = ` scale(${(currentScroll * 0.00015 + 1)}) `
-        pageEightTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+        pageEightTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,${((pg * 0.03))}deg) `
         if((pg - (pageEight.clientHeight -300)) <= 0){
             pageEightTextBlock.style.transform = `  translateX(-50%) rotate3d(1,1,1,0deg) `
         }
     }
     if((currentScroll + window.innerHeight + 300) >= (pageNine.offsetTop)  && ( currentScroll <= (Number(pageNine.offsetTop) + Number(pageNine.clientHeight)))){
         pg = pageNine.getBoundingClientRect().top
-        pageNineTextBlock.style.transform = `  translate(-50% , -50%) rotate3d(1,1,1,${((pg * 0.07))}deg) `
+        pageNineTextBlock.style.transform = `  translate(-50% , -50%) rotate3d(1,1,1,${((pg * 0.03))}deg) `
         if((pg - (pageNine.clientHeight -300)) <= 0){
             pageNineTextBlock.style.transform = `  translate(-50% , -50%) rotate3d(1,1,1,0deg) `
         }
@@ -119,6 +130,5 @@ window.addEventListener("scroll" , ()=>{
         imgWrapTwo.style.transform = ` scale(${(pg * 0.00030 + 1)}) `
         imgWrapThree.style.transform = ` scale(${(pg * 0.00030 + 1)}) `
         imgWrapFour.style.transform = ` scale(${(pg * 0.00030 + 1)}) `
-        console.log(pg);
     }
 })
