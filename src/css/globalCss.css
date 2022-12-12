@@ -28,7 +28,6 @@ header{
 nav{
     height: 70px;
     backdrop-filter: blur(7.5px)
-    /* border: 1px solid white; */
 }
 .menu-mobile-container{
     height: 100%;
@@ -76,22 +75,8 @@ nav{
 .pc-menu>div:nth-of-type(1) a:hover {
     color: #A08362;
 }
-.menu-mobile-open>ul>li:last-child>a {
-    border: 2px solid white;
-    /* padding: 5px 10px; */
-}
 .pc-menu div:nth-of-type(1) a{
-    /* background-color: red; */
     padding: 5px 13px;
-}
-/* .pc-menu>div:nth-of-type(1) li:first-child{
-    border: 2px solid white;
-} */
-.menu-mobile-open>ul>li:last-child>a:hover ,
-.pc-menu>div:nth-of-type(1) li:last-child>a:hover {
-    border: 2px solid #A08362;
-    background-color: #A08362;
-    color: #09090A;
 }
 .open{
     top: 70px;
@@ -159,7 +144,6 @@ nav{
     right: 16%;
     z-index: 1;
     transform: perspective(900px) translate3d(0px, 0%, 0px) scale3d(2, 2, 1) rotateX(-43deg) rotateY(27deg) rotateZ(70deg) skew(4deg, 0deg);
-    /* transform-style: preserve-3d; */
 }
 .pic-one-wrapper>figure{
     width: 100%;
@@ -168,14 +152,12 @@ nav{
 .pic-one-wrapper>figure>img{
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
 }
 /* ******************start of page two***************************************************** */
 .page-two , .page-four , .page-seven , .page-ten{
     position: relative;
     overflow: hidden;
     min-height: 550px;
-    /* border: 1px solid red; */
 }
 .page-two-text p , .page-four-text p , .page-seven-text p , .page-ten-text p{
     background-color: rgba(0, 0, 0, 0.466);
@@ -216,9 +198,6 @@ nav{
     right: -400px;
 }
 /* ****************************start of page five***************************************************************************** */
-/* .page-five{
-    overflow: hidden;
-} */
 .page-five-left , .page-six-right , .page-eight-left{
     height: 330px;
     background-color: #E1B788;
@@ -240,9 +219,6 @@ nav{
     transition: .3s linear;
 }
 /* *********************start of page six******************************************************************************** */
-/* .page-six-right{
-    height: 600px;
-} */
 .text-block-one{
     width: 341px;
     height: fit-content;
@@ -276,13 +252,13 @@ nav{
 /* *************************page nine************************************************************************************* */
 .page-nine{
     height: 600px;
-    /* border: 1px solid red; */
     position: relative;
     overflow: hidden;
 }
 .video-wrapper-one{
     width: 100%;
     height: 100%;
+    background-image: url(../img/poster.jpg);
 }
 .video-wrapper-one>video{
     width: 100%;
@@ -303,7 +279,6 @@ nav{
 .page-ten{
     padding: 140px 10px;
     overflow: visible;
-    /* border: 1px solid red; */
 }
 .img-wrap-one,
 .img-wrap-two,
@@ -364,6 +339,7 @@ nav{
 /* **************************page eleven************************************************************************* */
 footer{
     background-color: #E1B788;
+    padding-top: 100px;
 }
 footer a{
     font-size: 20px;
@@ -377,33 +353,3 @@ footer i{
     display: inline-flex;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.end{
-    margin-top: 350px;
-}

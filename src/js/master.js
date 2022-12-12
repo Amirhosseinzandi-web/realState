@@ -33,11 +33,6 @@ let imgWrapFour = document.querySelector(".img-wrap-four>figure");
 
 
 
-
-
-
-
-
 menuBtn.addEventListener("click" , (e)=>{
     menuMobileOpen.classList.toggle("open")
     e.stopImmediatePropagation()
@@ -50,29 +45,38 @@ window.addEventListener("click" , ()=>{
 })
 
 document.querySelector(".pc-menu div:nth-of-type(1) li:first-child").classList.add("active")
-_li = document.querySelectorAll(".pc-menu div:nth-of-type(1) li")
-_li.forEach(self=>{
+_liPc = document.querySelectorAll(".pc-menu div:nth-of-type(1) li")
+_liPc.forEach(self=>{
     self.addEventListener("click" , ()=>{
-        for(i=0; i<_li.length; i++){
-            _li[i].classList.remove("active")
+        for(i=0; i<_liPc.length; i++){
+            _liPc[i].classList.remove("active")
         }
         self.classList.add("active")
     })
 })
+
+document.querySelector(".menu-mobile-open li:first-child").classList.add("active")
+_liMobile = document.querySelectorAll(".menu-mobile-open li");
+_liMobile.forEach(self=>{
+    self.addEventListener("click" , ()=>{
+        for(i=0; i<_liMobile.length; i++){
+            _liMobile[i].classList.remove("active")
+        }
+        self.classList.add("active")
+    })
+}) 
 // ********************************************************************************************************************
 
 
 
 window.addEventListener("scroll" , ()=>{
     currentScroll = document.documentElement.scrollTop
-    // console.log(videoWrapper);
     let mq = window.matchMedia("(min-width:1200px)")
     if(mq.matches){
         videoWrapper.style.top = 10+ (currentScroll * .2) + "%"
         picOneWrapper.style.top = 10+ (currentScroll * .2) + "%"
     }
     // ***************************************
-    // (currentScroll <= (pageTwo.offsetTop + pageTwo.clientHeight))
     if((currentScroll + window.innerHeight + 300) >= (pageTwo.offsetTop)  && ( currentScroll <= (Number(pageTwo.offsetTop) + Number(pageTwo.clientHeight)))){
         pageTwoPicLeft.style.left = (-400) + (currentScroll * .08) + "px"
         pageTwoPicRight.style.transform = ` perspective(900px) rotateX(42deg) scale(1.6) rotate(${(currentScroll * .02)}deg) `
@@ -102,7 +106,6 @@ window.addEventListener("scroll" , ()=>{
         if((pg - (pageSix.clientHeight -300)) <= 0){
             pageSixTextBlock.style.transform = `  translateX(-50%) translateY(-50%) rotate3d(1,1,1,0deg) `
         }
-        
     }
     if((currentScroll + window.innerHeight + 300) >= (pageSeven.offsetTop)  && ( currentScroll <= (Number(pageSeven.offsetTop) + Number(pageSeven.clientHeight)))){
        
